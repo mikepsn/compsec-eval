@@ -17,4 +17,7 @@ for a change in presentation packages from seminar to beamer.
 
 Direct links to the paper and corresponding presentation can be found here:
 
-* 
+* [A Comparison of Computer Security Evaluation Critera (Paper) (PDF)](https://github.com/mikepsn/compsec-eval/blob/master/thesis.pdf?raw=true) 
+* [A Comparison of Computer Security Evaluation Criteria (Presentation)
+* (PDF)](https://github.com/mikepsn/compsec-eval/blob/master/compsec-eval-talk.pdf?raw=true)
+

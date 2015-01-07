@@ -1,0 +1,202 @@
+\chapter{Comparison Characteristics}
+
+    \section{Method}
+    The method followed in this comparison is as follows:
+    \begin{itemize}
+        \item A number of computer security standards relating to
+              the evaluation of trusted systems were chosen.
+        \item A list of evaluation characteristics were selected to
+              form the basis of the comparison.
+        \item The chosen documents were then summarised 
+              against the comparison characteristics.
+    \end{itemize}
+    This method was chosen because by evaluating the standards
+    against a number of characteristics, then provided we can extract some
+    useful information from the characteristics, we can also draw conclusions
+    about the standards.
+    The comparison of the security standards was based on the
+    general characteristics discussed in this section. 
+    The criteria are divided into three general categories:
+        \begin{description}
+            \item[General Comparison:] 
+                A general comparison provides us with information
+                regarding the scope of each of the documents, the types
+                of criteria specified, the types of computer systems
+                targeted, the criteria for the different levels of trust
+                and information on the reliance on separate
+                interpretations of the standards.
+            \item[Security Functionality:] 
+                This is a comparison of the
+                standards based on the different aspects of functional
+                security criteria. This allows us to look at how the standards
+                address different issues relating to security functionality.
+            \item[Functionality Assurance:] A comparison of the
+                security standards based on various system engineering
+                practices which must be put in place to assure that the
+                security functionality has been successfully implemented
+                and in fact provide operational security at the required
+                level of trust. This tells us the type of issues which the
+                developer must consider when designing and building a system
+                which needs to be evaluated against one of the standards.
+        \end{description}
+
+    Each category is further divided up into a number of characteristics. A
+    description of each the characteristics is given in this section.
+
+    The choice of the the characteristics on which the comparison is
+    made is not meant to be extensive. Rather, the characteristics were
+    chosen as general areas in which organisations developing trusted
+    systems need to be aware of and then a comparison of how each of the
+    documents deals with these characteristics is made.
+
+    \section{Organisation}
+
+        \subsection{Structure}
+            The overall structure of the security evaluation criteria
+            documents is compared, including the purpose and intended
+            audience of each document. The comparison on structure is an
+            overall general description of the similarities and
+            differences between the documents.
+
+            This characteristic was chosen because it provides us with 
+            information regarding the scope of the documents and type of security
+            issues that are addressed. This information is relevant to both
+            developers and those involved in evaluating systems.
+
+        \subsection{Levels of Trust}
+            A level of trust is a measure of the security functionality 
+            that a system provides, and the assurance of security that the
+            system gives.
+            Each standard specifies a number of levels of trust~\footnote{Also known
+            as assurance levels, evaluation levels and classes}.
+            A computer product
+            which is evaluated against a set of evaluation criteria is
+            given a rating corresponding to a level of trust of
+            satisfying the requirements of that level.
+
+            This characteristic was chosen because levels of trust are the primary
+            indicator that establish what level of security a system provides.
+            Organisations make decisions on what evaluated systems should be purchased
+            according the level at which the system is evaluated at. This allows the
+            organisation to look at the standards and see what level of trust corresponds
+            to their requirements. 
+
+            This characteristic allows us too look at what is specified for each level
+            of trust in each of the security evaluation criteria, and what security issues
+            are addressed at each level.
+
+    \section{Security Functionality}
+        The three characteristics of accountability, access control and audit were chosen
+        as a basis for comparing the security functionality criteria of the three
+        security standards. Although this is far from being a complete list of all the 
+        security functions which a system can provide, the purpose was to select 
+        only a few of the most important security functions. By looking at three of
+        the most important and widely implemented security functions, we are able
+        to assess how each of the security evaluation criteria addresses security functionality
+        at a general level.
+
+        \subsection{Accountability --- Identification and Authentication}
+            Accountability in computer security consists of two main
+            areas:
+                \begin{itemize}
+                    \item Identification 
+                    \item Authentication
+                \end{itemize}
+            Identification deals with identifying a user, and the files,
+            processes, actions and access to system resources 
+            associated with the user.
+            Authentication involves verifying the identity of a user or
+            process so that it can be decided which resources may be
+            accessed by the user.
+
+        \subsection{Access Control}
+            Discretionary Access Control (DAC), refers to information
+            in a computer system which is by default not freely
+            available, but access may be granted to other users at the
+            discretion of the owner of the information.
+
+            Mandatory Access Control (MAC) refers to the access of
+            information through classification and labeling and
+            different levels, accessed by users with authorisation at
+            those classifications.
+
+        \subsection{Audit}
+            Auditing in secure computer systems serves two main
+            purposes. Firstly it allows the monitoring of a system's
+            operation (through mechanisms such as audit logs), to
+            identify security breaches and to facilitate corrective
+            action. Secondly it is used in functionality
+            assurance (see section~\ref{functionality-assurance}) by certifying
+            that a system meets certain security requirements.
+
+    \section{Security Functionality Assurance}
+    \label{functionality-assurance}
+    Security functionality assurance deals with the practices which 
+    must be put in place by a developer for a system to be evaluated at
+    a particular assurance level. Therefore all the characteristics chosen in this
+    category for the comparison deal with the different system engineering
+    practices associated with the system development life cycle.
+
+    The characteristics selected are security policy, system design,
+    implementation, security testing, security documentation, and
+    configuration control. The information provided by the comparison is of
+    importance to developers as it indicates the kind of engineering practices
+    which have to be put in place when developing systems to be evaluated
+    against one the standards.
+    
+        \subsection{Security Policy}
+            A security policy is a set of requirements with respect to the 
+            security function that a system provides. From the security
+            policy a security policy model is developed, which contains
+            detailed descriptions of a system's security functions.
+            The security policy model may be described using a 
+            informal, semi-formal or formal specification style.
+            
+        \subsection{System Design}
+            Systems requiring high levels of trust must be designed to
+            ensure that the the system's security policy is adequately
+            enforced. The system design characteristic will look at what
+            the each of the evaluation criteria specify as requirements
+            for the design of a secure system to assure the system's
+            security functionality;
+
+            This includes the requirements for formal designs at both
+            the architectural and detailed level, the design
+            methodologies used,  and traceability and mapping between
+            the design and the requirements specification.
+
+        \subsection{Implementation}
+            The implementation requirements for a system in each of the
+            evaluation criteria look at issues such as the choice and use of 
+            well defined programming languages, coding standards and
+            compliance with these standards, the choice of development
+            tools such as compilers, the provision of source code for
+            evaluation, the mapping between the source code and the
+            detailed design, and the specification of implementation
+            specific options.
+
+        \subsection{Security Testing}
+            Although some form of testing is present in all system
+            engineering processes, when developing trusted and secure
+            systems it is of very important to ensure that the system 
+            is tested adequately so that the user of the system has some
+            level of confidence that the system's security policy is
+            being satisfied.
+
+            Issues such as the type of testing required for different
+            levels of trust, test documentation such as test plans, test
+            results, and justification that the testing is sufficient.
+
+        \subsection{Security Documentation}
+            Trusted systems must be delivered with documentation to
+            adequately inform both the user and system administrator
+            about the security features of the system and the secure
+            operation and administration of the system.
+
+        \subsection{Configuration Management}
+            Trusted systems must be developed under approved and
+            reliable configuration management system, so that all source
+            code, object code, and all documentation (requirements,
+            design, testing, user and security) are under revision
+            control and are consistent.
+

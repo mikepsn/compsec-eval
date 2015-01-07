@@ -1,0 +1,173 @@
+%----------------------------------------------------------------------
+% SOFTWARE ENGINEERING THESIS
+% AUTHOR - MICHAEL PAPASIMEON
+%----------------------------------------------------------------------
+
+\documentclass[a4paper,titlepage]{report}
+
+%----------------------------------------------------------------------
+% LATEX PACKAGES
+%----------------------------------------------------------------------
+
+\usepackage{a4wide}
+\usepackage{fancybox}
+%\usepackage{fancyheadings}
+\usepackage{fancyhdr} 
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage[dvips]{graphicx}
+\usepackage{pslatex}
+
+%----------------------------------------------------------------------
+% PAGESTYLE
+%----------------------------------------------------------------------
+
+\pagestyle{fancyplain}
+
+%----------------------------------------------------------------------
+% LATEX MACROS
+%----------------------------------------------------------------------
+
+\restylefloat{table}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.3ex}
+
+\renewcommand{\chaptername}{Section}
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\bibname}{References}
+
+\newcommand{\HRule}{\rule{\textwidth}{1mm}}
+\newcommand{\Trule}{\rule{\textwidth}{0.1pt}}
+
+\newcommand{\maketitlepage}[2]{
+    \begin{titlepage}
+    \vspace*{\stretch{1}}
+    \HRule
+    \begin{flushright}
+        {\textsf{{ \Huge  #1} }}
+        \\[5mm]
+        \Trule
+        \\[5mm]
+        \Large \textsf{#2}
+    \end{flushright}
+    \HRule
+    \vspace*{\stretch{2}}
+    \begin{center}
+        \Large\textsc{433-463 Thesis\\
+                      Final Year Software Engineering Thesis\\
+                      Department of Computer Science\\
+                      October 1997}
+    \end{center}
+    \end{titlepage}
+}
+
+\newcommand{\Section}[1]{\subsection{#1}}
+\newcommand{\Subsection}[1]{\subsubsection{#1}}
+\newcommand{\Subsubsection}[1]{\paragraph{#1}}
+
+\newenvironment{Boxedminipage}%
+    {\begin{Sbox}\begin{minipage}}%
+    {\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+\newcommand{\Startbox}[1]{\begin{Boxedminipage}{\textwidth}%
+            {\large \sffamily{#1}} \vspace{1mm} \hrule \vspace{2mm} }
+\newcommand{\Endbox}{\end{Boxedminipage}}
+
+\newcommand{\bt}{\begin{center}\begin{tabular}%
+                {|>{\sffamily}m{6cm}|>{\sffamily}m{2cm}%
+                 |>{\sffamily}m{2cm}|>{\sffamily}m{2cm}|} \hline %
+                \bfseries{Requirement} & \bfseries{TCSEC} & %
+                \bfseries{ITSEC} & \bfseries{CTCPEC} \\ \hline \hline}
+\newcommand{\et}{\end{tabular}\end{center}}
+\newcommand{\cmp}[4]{#1 & #2 & #3 & #4 \\ \hline}
+
+%----------------------------------------------------------------------
+% COMMANDS TO CONSTRUCT FANCY HEADINGS
+%----------------------------------------------------------------------
+
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\plainfootrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\plainheadrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.3ex}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\lhead[\fancyplain{\sffamily\thepage}{\sffamily\thepage}]%
+      {\fancyplain{\sffamily\rightmark}{\sffamily\rightmark}}
+\rhead[\fancyplain{\sffamily\leftmark}{\sffamily\leftmark}]%
+      {\fancyplain{\sffamily\thepage}{\sffamily\thepage}}
+\cfoot{}
+
+%----------------------------------------------------------------------
+% MAIN DOCUMENT
+%----------------------------------------------------------------------
+
+\begin{document}
+    \maketitlepage{A Comparison of \\ 
+    Computer Security Evaluation Criteria}{Michael Papasimeon} 
+    \begin{abstract}
+            This document describes the results of a comparison of
+            the three most important and widely used computer security
+            evaluation criteria; the US Trusted Computer Systems
+            Evaluation Criteria, the Canadian Trusted Computer Product
+            Evaluation Criteria and the European Information Technology
+            Security Evaluation Criteria.
+    \end{abstract}
+    \tableofcontents
+    \listoftables
+    \newpage
+
+    \input{introduction}
+    \input{criteria}
+    \input{standards}
+    \input{comparison}
+    \input{evaluation}
+    \input{conclusion}
+    \appendix
+    \input{appendix}
+    \bibliographystyle{unsrt}
+    \bibliography{references}
+
+    \renewcommand{\bibname}{References Used but not Cited}
+    \begin{thebibliography}{it}
+        \bibitem[1]{1}
+            Simson Garfinkel and Gene Spafford, 
+            \emph{Practical UNIX and Internet Security},
+            O'Reilly and Associates, Inc, 1996
+        \bibitem[2]{2}
+            B. Clifford Neuman,
+            \emph{Protection and Security Issues for Futire Systems},
+            Department of Computer Science and Engineering,
+            University of Washington
+        \bibitem[3]{3}
+            CT Sennet,
+            \emph{Computer Security},
+            Royal Signals and Radar Establishment
+        \bibitem[4]{4}
+            Charles P. Pfleeger,
+            \emph{The Fundamentals of Information Security},
+            IEEE Software, January, 1997
+        \bibitem[5]{5}
+            COAST Security Archive,
+            Purdue University, \newline
+            \texttt{http://www.cs.purdue.edu/coast/archive/index.html}
+        \bibitem[6]{6}
+            Mark Joseph Edwards,
+            \emph{The Handy Security Toolkit}, 
+            Windows NT Magazine, July, 1997
+        \bibitem[7]{7}
+            Joint Task 1 (JT01),
+            \emph{Relating Functionality Class and Security Sub-profile Specification},
+            EC/US Joint Workplan for cooperation on Security of Information Systems
+    \end{thebibliography}
+
+\end{document}
+
+%----------------------------------------------------------------------
+% END DOCUMENT
+%----------------------------------------------------------------------

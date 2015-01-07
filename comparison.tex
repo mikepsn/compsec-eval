@@ -1,0 +1,923 @@
+\chapter{Comparison of the Computer Security Evaluation Criteria} 
+
+\section{Comparing Organisational Structure} 
+\label{structure}
+
+    Table~\ref{table:docstructure} shows the document structure for each of the
+    security evaluation criteria being compared. 
+
+    The first part of the TCSEC describes the 
+    criteria used to evaluate computer systems. The criteria are divided into
+    four divisions which are given the following names.
+        \begin{itemize}
+            \item Division D -- Minimal Protection
+            \item Division C -- Discretionary Protection
+            \item Division B -- Mandatory Protection
+            \item Division A -- Verified Protection
+        \end{itemize}
+    Each division consists of one or more classes. 
+    Each class contains a list of security functionality and security assurance
+    requirements which a system must satisfy to be evaluated at that class.
+    There are seven classes in the TCSEC --- A1, B3, B2, B1, C2, C1, and D, in 
+    decreasing order of features and assurances.
+    The requirements for a higher class are always a superset of the lower class.
+
+    The second part of the TCSEC contains some information regarding the rationale
+    behind the development of the evaluation classes. It also contains some
+    guidelines on various security issues which are specified in the evaluation classes 
+    such as security testing.
+
+    The second column of table~\ref{table:docstructure} shows the document structure
+    for the ITSEC. The ITSEC describes it's approach to functionality
+    criteria in chapter 2, and effectiveness assurance in chapter 3.
+    This is followed by a chapter on the the security assurance levels.
+    There are seven levels of assurance in the ITSEC --- E6, E5, E4, E3, E2,
+    E1, and E0 in decreasing order of features and assurances similar to the
+    TCSEC. 
+
+    Example functionality classes are contained in Annex A of the ITSEC, 
+    and are not part of the main criteria.
+    Unlike the TCSEC and the CTCPEC, the ITSEC does not define it's own
+    security functionality criteria. It provides guidelines, recommendations
+    and examples 
+    for selecting functionality criteria for a system.
+
+    \begin{table}[H]
+    \begin{center} 
+    \begin{tabular}{|>{\small \sffamily}p{5.3cm}
+                    |>{\small \sffamily}p{5.3cm}
+                    |>{\small \sffamily}p{5.3cm}|} \hline
+        \bfseries{TCSEC} & \bfseries{ITSEC} & \bfseries{CTCPEC} \\ \hline \hline
+        \begin{enumerate} 
+            \item Introduction
+            \item Part I : The Criteria
+                \begin{itemize}
+                    \item Division D
+                        \begin{itemize}
+                            \item Class D
+                        \end{itemize}
+                    \item Division C
+                        \begin{itemize}
+                            \item Class C1
+                            \item Class C2
+                        \end{itemize}
+                    \item Division B
+                        \begin{itemize}
+                            \item Class B1
+                            \item Class B2
+                            \item Class B3
+                        \end{itemize}
+                    \item Division A
+                        \begin{itemize}
+                            \item Class A1
+                        \end{itemize}
+                \end{itemize}
+            \item Part II : Rationale and Guidelines
+                \begin{itemize}
+                    \item Control objectives for trusted computer systems
+                    \item Rationale behind the evaluation classes
+                    \item The relationship between policy and the criteria
+                    \item A guideline on covert channels
+                    \item A guideline on configuring mandatory access control features
+                    \item A guideline on security testing
+                \end{itemize}
+            \item Appendices
+                \begin{itemize}
+                    \item A. Commercial Product Evaluation Process
+                    \item B. Summary of Evaluation Criteria Divisions
+                    \item C. Summary of Evaluation Criteria Classes
+                    \item D. Requirement Directory
+                \end{itemize}
+            \item Glossary
+            \item References
+        \end{enumerate} 
+        &  
+        \begin{enumerate}
+            \item Introduction
+            \item Functionality
+            \item Assurance -- Effectiveness
+            \item Assurance -- Correctness
+                \begin{itemize}
+                    \item Level E0
+                    \item Level E1
+                    \item Level E2
+                    \item Level E3
+                    \item Level E4
+                    \item Level E5
+                    \item Level E6
+                \end{itemize}
+            \item Results of Evaluation
+            \item Glossary and References
+            \item Annex A -- Example Functionality Classes
+                \begin{itemize}
+                    \item F-C1
+                    \item F-C2
+                    \item F-B1
+                    \item F-B2
+                    \item F-B3
+                    \item F-IN
+                    \item F-AV
+                    \item F-DI
+                    \item F-DC
+                    \item F-DX
+                \end{itemize}
+            \item Annex B -- The Claims Language
+        \end{enumerate}
+        &
+        \begin{enumerate}
+            \item Introduction
+            \item Confidentiality Criteria
+            \item Integrity Criteria
+            \item Availability Criteria
+            \item Accountability Criteria
+            \item Assurance Criteria
+                \begin{itemize}
+                    \item T0 -- non-compliant
+                    \item Level T-1
+                    \item Level T-2
+                    \item Level T-3
+                    \item Level T-4
+                    \item Level T-5
+                    \item Level T-6
+                    \item Level T-7
+                \end{itemize}
+            \item Definitions
+            \item Bibliography
+            \item Appendices
+                \begin{itemize}
+                    \item A. Technical Rationale
+                    \item B. Constraints
+                    \item C. Fundamentals
+                    \item D. Concepts
+                    \item E. Guide to Object Mediation
+                    \item F. Guide to Confidentiality
+                    \item G. Guide to Integrity
+                    \item H. Guide to Availability
+                    \item I. Guide to Accountability
+                    \item J. Guide to Assurance
+                    \item K. Implementing Services via Cryptography
+                    \item L. Government Security Policy and Standards
+                    \item M. Security Functionality Profiles
+                \end{itemize}
+        \end{enumerate}
+        \\ \hline
+    \end{tabular}
+    \end{center} 
+    \caption{Document Structure of Computer Security Evaluation Criteria} \label{table:docstructure}
+    \end{table}
+
+    The evaluation criteria of the CTCPEC are divided into those dealing with security functionality and those dealing
+    with security assurance. 
+    The CTCPEC contains individual chapters describing confidentiality criteria, integrity criteria, 
+    availability criteria, accountability criteria and assurance criteria. 
+    There are eight levels of assurance in the ITSEC --- T7, T6, T5, T4, RT, T2, T1, and T0 in 
+    decreasing order of assurance.
+
+\section{Comparing Levels of Trust}
+This section looks at the different levels of trust specified by each of the documents.
+A level of trust is metric used to measure the level of security features and assurance
+a system provides.
+
+\subsection{Classes of the TCSEC}
+\label{tcsec-classes}
+
+    Table~\ref{table:tcsec-class-table} summarises the requirements for each of the 
+    classes of the TCSEC. Each class in the TCSEC addresses four different
+    areas.
+
+    \subsubsection{Security Policy}
+    All the classes above class D, in the TCSEC require the description of a system security policy.
+    The security policy covers functionality such discretionary and mandatory access control and labelling.
+    The specification of a security policy model is required in some of the classes, with the higher
+    classes requiring use of semi-formal or formal methodologies, for the specification of the model
+    and for the verification of the system design.
+
+    \subsubsection{Accountability}
+    The accountability requirements of the TCSEC classes deal with issues such as identification,
+    authentication, trusted path and auditing. The higher the class, the stricter the requirements
+    for identification, authentication, and auditing.
+
+    \subsubsection{Assurance}
+    The TCSEC classes address operational assurance (covert channels, trusted recovery)
+    and life cycle assurance (requirements, design, implementation, testing, formal specification
+    and verification).
+
+    \subsubsection{Documentation}
+    All TCSEC classes require the provision of security documentation for the user and
+    the system administrator. The higher classes require the provision of test and design
+    documentation.
+
+    \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{|>{\sffamily}p{1cm}|>{\sffamily}p{12cm}|} \hline
+            \multicolumn{2}{|c|}{\bfseries{\sffamily{TCSEC}}} \\ \hline
+            \bfseries{Level} & \bfseries{Description} \\ \hline
+            D  & Minimal Protection \newline
+                 Inadequate assurance
+                 \\ \hline
+            C1 & Discretionary Security Protection \newline
+                 Separation between users and data,
+                 enforcement of access limitations for individual users.
+                 Use of discretionary access control, design
+                 documentation, identification and authentication,
+                 secure system architecture and integrity,
+                 security testing, security documentation for
+                 users and administrators and test documentation.
+                 \\ \hline
+            C2 & Controlled Access Protection \newline
+                    C1 requirements and stricter discretionary
+                    access control. Accountability of all users
+                    through procedures such as auditing.
+                    \\ \hline
+            B1 & Labelled Security Protection \newline
+                    C2 requirements, and informal security policy
+                    model specification, data labelling according
+                    to specification, and mandatory access control.
+                    Formal or informal design specification and
+                    verification.
+                    \\ \hline
+            B2 & Structured Protection \newline
+                    B1 requirements and a formal security policy model,
+                    extended discretionary and mandatory access control
+                    enforcement. Addressing of covert channels, 
+                    separation of security critical components,
+                    strict configuration management and strong
+                    authentication mechanisms.
+                    \\ \hline
+            B3 & Security Domains \newline
+                    B2 requirements and significant engineering
+                    to minimize system's complexity, expanded audit and
+                    security administration mechanisms, and system
+                    recovery procedures.
+                    \\ \hline
+            A1 & Verified Design \newline
+                    B3 requirements and use of formal design specification and verification
+                    techniques throughout whole life of the system,
+                    starting from a formal security policy model, a
+                    formal top level specification of the design and a
+                    formal detailed design. Support for strict
+                    configuration management controls and secure
+                    distribution of the system.
+                    \\ \hline
+        \end{tabular}
+        \end{center}
+    \caption{Summary of the TCSEC assurance levels} \label{table:tcsec-class-table}
+    \end{table}
+
+\subsection{Assurance Levels of the ITSEC}
+\label{itsec-classes}
+    Table~\ref{table:itsec-class-table} summarises the requirements for the different levels of 
+    assurance of the ITSEC.
+    The requirements for the ITSEC assurance levels are divided into a number clearly
+    defined areas.
+    There are four areas dealing with the development
+    and the operation of the system. Each area is divided into smaller
+    categories. At each level of assurance each category has a number of requirements which a system
+    must satisfy for it to be evaluated at that level.
+
+    \subsubsection{Development Process}
+        \begin{itemize}
+            \item Requirements Specification
+            \item Architectural Design
+            \item Detailed Design
+            \item Implementation
+        \end{itemize}
+
+    \subsubsection{Development Environment}
+        \begin{itemize}
+            \item Configuration Control
+            \item Programming Languages and Compilers
+            \item Developer's Security
+        \end{itemize}
+
+    \subsubsection{Operational Documentation}
+        \begin{itemize}
+            \item User Documentation
+            \item Administrator Documentation
+        \end{itemize}
+
+    \subsubsection{Operational Environment}
+        \begin{itemize}
+            \item Delivery and Configuration
+            \item Start-up and Operation
+        \end{itemize}
+
+    \begin{table}[H]
+        \begin{center}
+        \begin{tabular}{|>{\sffamily}p{1cm}|>{\sffamily}p{12cm}|} \hline
+            \multicolumn{2}{|c|}{\bfseries{\sffamily{ITSEC}}} \\ \hline
+            \bfseries{Level} & \bfseries{Description} \\ \hline
+            E0 & Inadequate Assurance \\ \hline
+            E1 & Provision of a security policy, 
+                 informal architectural design, and security testing
+                 to show the system satisfies it's security policy.
+                 \\ \hline
+            E2 & E1 requirements and an informal detailed design,
+                 evidence of functional testing, use of a configuration
+                 control system, and use of an approved distribution
+                 procedure.
+                 \\ \hline
+            E3 & E2 requirements and the provision of source code
+                 and/or hardware corresponding to the security 
+                 mechanisms. Evidence of testing those security
+                 mechanisms. 
+                 \\ \hline
+            E4 & E3 requirements and formal security policy model
+                    supporting the system's security policy. 
+                    Security enforcing functions, architectural design
+                    and detailed design specified in a semi-formal
+                    style.
+                    \\ \hline
+            E5 & E4 requirements and a close correspondence between the 
+                    detailed design and source code and/or hardware.
+                    \\ \hline
+            E6 & E5 requirements and formal specification of the of 
+                    security enforcing functions and architectural
+                    design, consistent with the formal security
+                    policy model.
+                    \\ \hline
+        \end{tabular}
+        \end{center} 
+    \caption{Summary of the ITSEC assurance levels} \label{table:itsec-class-table}
+    \end{table}
+
+    \subsubsection{Security Functionality Criteria}
+    Unlike the TCSEC and the CTCPEC, the ITSEC does not specify
+    any functionality criteria. It is the responsibility of the developer to provide a specification of the
+    security enforcing functions which the system provides. Annex A of the ITSEC contains example
+    functionality classes which the developer can use as a guide.
+    Although the selection of arbitrary security functionality
+    in a system is allowed by the ITSEC, it is recommended that the system's security functions
+    are grouped into eight generic categories.
+
+    \begin{itemize}
+        \item Identification and Authentication
+        \item Access Control
+        \item Audit
+        \item Object Reuse
+        \item Accuracy
+        \item Reliability of Service
+        \item Data Exchange
+    \end{itemize}
+
+\subsection{Assurance Levels and Security Ratings of the CTCPEC}
+\label{ctcpec-classes}
+
+    Table~\ref{table:ctcpec-levels} summarises the requirements for the assurance levels of the CTCPEC.
+    As can be seen from the table, there is an emphasis on semi-formal and formal specifications
+    at the higher classes for the security policy model, and the architectural and detailed design.
+    There is also an emphasis on verification, through the requirements that there is a mapping
+    or tracing between the different phases of the system development.
+    Each assurance level in the CTCPEC addresses six different areas.
+
+    \subsubsection{Architecture}
+    This area covers requirements relating to a system's overall architecture and the enforcement
+    of a system's security policy.
+
+    \subsubsection{Development Environment}
+    This area covers requirements such as the choice of development process, and configuration management.
+
+    \subsubsection{Development Evidence}
+    This area covers the requirements which show evidence of the product being developed.
+    This includes requirements for a functional specification, architectural and detailed design
+    and implementation.
+    
+    \subsubsection{Operational Environment}
+    The operational environment requirements include the secure distribution, installation,
+    startup and operation of a trusted system.
+
+    \subsubsection{Security Documentation}
+    The security documentation requirements include the requirements for both user and administrator
+    documentation.
+
+    \subsubsection{Security Testing}
+    The security testing requirements cover issues such as security test planning,
+    security test procedures, justification as to why the test coverage is sufficient,
+    and evidence of security testing through the provision of test results.
+
+    \begin{table}[H]
+        \begin{center}
+         \begin{tabular}{|>{\sffamily}p{1cm}|>{\sffamily}p{12cm}|} \hline
+            \multicolumn{2}{|c|}{\bfseries{\sffamily{CTCPEC}}} \\ \hline
+            \bfseries{Level} & \bfseries{Description} \\ \hline
+            T0 & Inadequate level of assurance
+                 \\ \hline
+            T1 & Informal security policy, 
+                 informal architectural design,
+                 informal detailed design of security critical components.
+                 \\ \hline
+            T2 & Informal security policy, 
+                 informal security policy model 
+                 informal architectural design, 
+                 informal detailed design, 
+                 \\ \hline
+            T3 & Informal security policy
+                 semi-formal security policy model,
+                 semi-formal architectural design, 
+                 informal detailed design,
+                 provide subset of source code for evaluation.
+                 \\ \hline
+            T4 & Informal security policy,
+                 formal security policy model,
+                 semi-formal architectural design,
+                 semi-formal detailed design,
+                 provide subset of source code for evaluation.
+                 \\ \hline
+            T5 & Informal security policy,
+                 formal security policy model,
+                 semi-formal architectural design,
+                 semi-formal detailed design,
+                 provide source code of entire product for evaluation.
+                 \\ \hline
+            T6 & Informal security policy,
+                 formal security policy model,
+                 formal architectural design,
+                 semi-formal detailed design,
+                 provide source code of entire product for evaluation.
+                 \\ \hline
+            T7 & Informal security policy,
+                 formal security policy model,
+                 formal architectural design,
+                 formal detailed design,
+                 provide source code of entire product for evaluation.
+                 \\ \hline
+        \end{tabular}
+        \end{center}
+    \caption{Summary of the CTCPEC assurance levels} \label{table:ctcpec-levels}
+    \end{table}
+
+    \subsubsection{Security Functionality Criteria}
+    Unlike the TCSEC, the CTCPEC separates the functionality criteria from the assurance criteria.
+    Also, unlike ITSEC, the CTCPEC does not leave the decision for the choice of security functionality 
+    to the developer. The CTCPEC clearly defines a large number of security functionality criteria.
+    Table~\ref{table:ctcpec-functionality} summarises the functionality criteria
+    of the CTCPEC.
+
+    As can be seen from the table, the CTCPEC contains four types of security
+    functionality criteria.
+        \begin{itemize}
+            \item Confidentiality Criteria
+            \item Integrity Criteria
+            \item Availability Criteria
+            \item Accountability Criteria
+        \end{itemize}
+    Each of these criteria types contain a number of specific criteria, each with
+    a number of ratings. For example, ``Audit'' is one of the accountability
+    criteria. 
+    
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|>{\sffamily}p{5cm}|>{\sffamily}p{6cm}|} \hline
+            \bfseries{Functionality Criteria} & \bfseries{Levels} \\ \hline\hline
+            \multicolumn{2}{|l|}{\bfseries{\sffamily{Confidentiality Criteria}}} \\ \hline
+            Covert Channels                 & CC-0, CC-1, CC-2, CC-3 \\ \hline
+            Discretionary Confidentiality   & CD-0, CD-1, CD-2, CD-3, CD-4 \\ \hline
+            Mandatory Confidentiality       & CM-0, CM-1, CM-2 \\ \hline
+            Object Reuse                    & CR-0, CR-1 \\ \hline\hline
+
+            \multicolumn{2}{|l|}{\bfseries{\sffamily{Integrity Criteria}}}   \\ \hline           
+            Domain Integrity        & IB-0, IB-1, IB-2 \\ \hline
+            Discretionary Integrity & ID-0, ID-1, ID-2, ID-4 \\ \hline
+            Mandatory Integrity     & IM-0, IM-1, IM-2, IM-4 \\ \hline
+            Physical Integrity      & IP-0, IP-1, IP-2, IP-3, IP-4 \\ \hline
+            Rollback                & IR-0, IR-1, IR-2 \\ \hline
+            Separation of Duties    & IS-0, IS-1, IS-2 \\ \hline
+            Self Testing            & IT-0, IT-1, IT-3 \\ \hline\hline
+
+            \multicolumn{2}{|l|}{\bfseries{\sffamily{Availability Criteria}}}   \\ \hline 
+            Containment         & AC-0, AC-1, AC-2, AC-3 \\ \hline
+            Fault Tolerance     & AF-0, AF-1, AF-2 \\ \hline
+            Robustness          & AR-0, AR-1, AR-2, AR-3 \\ \hline
+            Recovery            & AY-0, AY-1, AY-2, AY-3 \\ \hline\hline
+
+            \multicolumn{2}{|l|}{\bfseries{\sffamily{Accountability Criteria}}}   \\ \hline
+            Audit   &   WA-0, WA-1, WA-2, WA-3, WA-4, WA-5 \\ \hline
+            Identification and Authentication   & WI-0, WI-1, WI-2, WI-3 \\ \hline
+            Trusted Path    & WT-0, WT-1, WT-3 \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Summary of the CTCPEC's functionality criteria and
+             available security ratings} \label{table:ctcpec-functionality}
+    \end{table}
+
+    
+\subsection{Summary of Evaluation Areas}
+    When evaluating systems for assurance, the evaluation occurs against a group of general criteria. 
+    Table~\ref{table:areas} summarises the areas in which requirements are specified
+    for each of the levels of trust in each of the documents.
+
+    \begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|>{\sffamily}p{4.5cm}|>{\sffamily}p{4.5cm}|>{\sffamily}p{4.5cm}|} \hline
+            \bfseries{TCSEC}   &   \bfseries{ITSEC}   &   \bfseries{CTCPEC}  \\ \hline \hline
+            Security Policy \newline
+            Accountability  \newline
+            Assurance       \newline
+            Documentation
+            &
+            Development Process         \newline
+            Development Environment     \newline
+            Operational Documentation   \newline
+            Operational Environment     \newline
+            &
+            Architecture                \newline
+            Development Environment     \newline
+            Development Evidence        \newline
+            Operational Environment     \newline
+            Security Documentation      \newline
+            Security Testing            
+            \\ \hline
+        \end{tabular} 
+    \end{center}
+    \caption{Areas of Evaluation} \label{table:areas}
+    \end{table}
+
+\subsection{Equivalent Levels of Trust}
+    Table~\ref{table:assurance-levels} shows the approximate correspondence between
+    levels of assurance for the three documents. The relationship between the TCSEC
+    classes and the ITSEC assurance levels are specified in the ITSEC~\cite{itsec}. The relationship
+    between the ITSEC and the CTCPEC assurance levels, are obtained from the results of an international
+    collaboration to develop a common approach to security standards described in
+    \emph{Foundations for the Harmonization of Information Technology Security Standards}~\cite{harmony}.
+
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|>{\sffamily}p{2cm}|>{\sffamily}p{2cm}|>{\sffamily}p{2cm}|} \hline
+    \bfseries{TCSEC}   &   \bfseries{ITSEC}   &   \bfseries{CTCPEC}  \\ \hline \hline
+    A1      &   E6      &   T7      \\ \hline
+    B3      &   E5      &   T6      \\ \hline
+    B2      &   E4      &   T5      \\ \hline
+    B1      &   E3      &   T4      \\ \hline
+    C2      &   E2      &   T3      \\ \hline
+    C1      &   E1      &   T2      \\ \hline
+            &           &   T1      \\ \hline
+    D       &   E0      &   T0      \\ \hline
+    \end{tabular}
+    \end{center}
+    \caption{Comparison of Assurance Levels} \label{table:assurance-levels}
+    \end{table} 
+
+\section{Summary of General Characteristics}
+
+    \begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|>{\sffamily} m{7cm}|>{\sffamily}m{15mm}%
+                    |>{\sffamily}m{15mm}%
+                    |>{\sffamily}m{15mm}|} \hline
+        \bfseries{Characteristic} & \bfseries{TCSEC} & %
+        \bfseries{ITSEC} & \bfseries{CTCPEC} \\ \hline \hline
+
+        \multicolumn{1}{|c|}{\bfseries{\sffamily{Structure}}} 
+        & & & \\ \hline
+
+        Introduction                            & YES & YES & YES \\ \hline
+        Assurance Criteria                      & YES & YES & YES \\ \hline
+        Separation of Functionality Criteria    & NO  & YES  & YES \\ \hline
+        Additional Guidelines for Criteria      & YES & NO & YES \\ \hline
+        Rationale behind Criteria               & YES & NO & YES \\ \hline
+        Glossary/Definitions                    & YES & YES & YES \\ \hline 
+        References/Bibliography                 & YES & YES & YES \\ \hline \hline
+
+        \multicolumn{1}{|c|}{\bfseries{\sffamily{Levels of Trust}}} 
+        & & & \\ \hline 
+        
+        Separation of assurance criteria from security functionality
+        criteria (confidentiality, integrity, availability,
+        accountability)
+        & NO & YES & YES \\ \hline \hline
+
+        \multicolumn{1}{|c|}{\bfseries{\sffamily{Security Functionality}}}
+        & & & \\ \hline
+        Specification of Functionality Criteria & YES & NO & YES \\ \hline \hline
+
+        \multicolumn{1}{|c|}{\bfseries{\sffamily{Criteria Interpretations}}} 
+        & & & \\ \hline 
+
+        Reliance on separate interpretation documents to cover wider range 
+        of systems & YES & NO & NO \\ \hline 
+
+    \end{tabular}
+    \end{center}
+    \caption{Summary of General Characteristics} \label{table:general-char}
+    \end{table}
+
+    Table~\ref{table:general-char} gives a summary of some of the general
+    characteristics of the three sets of security evaluation criteria.
+
+    Both the ITSEC and the CTCPEC target a greater range of systems than does the TCSEC, are more explicit
+    about the requirements at each assurance level and therefore do not require separate interpretation
+    documents. The requirements in the TCSEC are more general and hence it is often the case that
+    there are several ways to read a given statement~\footnote{Stated in the NSA's TPEP FAQ~\cite{tpepfaq}}.
+    As a result, a number of official interpretations of the TCSEC have been developed.
+    The interpretations are official statements articulating which of a number of possible ways to
+    read a security requirement for different applications. For example, the Trusted Network Interpretation
+    (TNI)~\cite{redbook} of the TCSEC, also referred to as ``The Red Book''.
+    The official interpretations of the TCSEC are collectively know as the ``The Rainbow Series''~\cite{rainbow}.
+ 
+
+
+%=========================================================================
+%=========================================================================
+%=========================================================================
+
+\section{Comparing Security Functionality} 
+This section compares the three sets of security evaluation criteria with 
+respect to specific areas of security functionality.
+The comparison is made on three important areas of security functionality. 
+    \begin{itemize}
+        \item Accountability
+        \item Access Control
+        \item Audit
+    \end{itemize}
+
+%--------------------------------------------------------------------------
+\newcommand{\heading}[1]{\multicolumn{2}{|c|}{\bfseries\sffamily{#1}} \\ \hline}
+\newcommand{\bc}{\begin{tabular}{|>{\sffamily}p{2cm}|>{\sffamily}p{11cm}|} \hline}
+\newcommand{\ec}{\end{tabular}}
+\newcommand{\approach}[1]{Approach & #1 \\ \hline}
+\newcommand{\levels}[1]{Levels & #1 \\ \hline}
+\newcommand{\type}[1]{Criteria Type & #1 \\ \hline}
+%--------------------------------------------------------------------------
+
+    \subsection{Accountability --- Identification and Authentication} 
+    Table~\ref{table:accountability} summarises the requirements for identification and
+    authentication.
+
+    Accountability is one of four major criteria in which requirements 
+    are specified for each class of the TCSEC.  
+    Requirements for identification and authentication are addressed in this area. The issue of ``trusted paths'' 
+    are addressed in this area for the higher classes.
+
+    The ITSEC does not specify any criteria regarding accountability through identification and 
+    authentication, as it allows
+    the developer to select arbitrary security functions for a product.  
+    The ITSEC recommends that ''Identification and Authentication'' is one of the categories which the developer should
+    use when specifying functionality.  The ITSEC provides example functionality classes, which the 
+    developer can use a guide. Identification and authentication requirements are present in all the example classes.
+    A set of four levels (WI-0 to WI-3) are defined, indicating increasing security in
+    terms of identifying and authenticating users.
+
+    \begin{table}[H]
+    \begin{center}
+    \bc 
+        \heading{TCSEC}
+            \levels{Identification: C1, C2, B1, B2, B3, A1 \newline
+                    Authentication: C1, C2, B1, B2, B3, A1 \newline
+                    Trusted Path: B2, B3, A1 }
+        \heading{ITSEC} 
+            \levels{F-C1, F-C2, F-B1, F-B2, F-B3,
+                    F-IN, F-AV, F-DI, F-DC, F-DX}
+        \heading{CTCPEC}
+            \levels{WI-0, WI-1, WI-2, WI-3}
+    \ec
+    \end{center}
+    \caption{Comparison of Accountability Criteria --- Identification and Authentication} \label{table:accountability}
+    \end{table}
+
+%--------------------------------------------------------------------------
+
+    \subsection{Access Control} 
+    Table~\ref{table:access-control} summarises the requirements for access control
+    mechanisms. In the TCSEC, access control is addressed under the area of security policy.
+    The TCSEC classes look at discretionary access control and mandatory access control.
+    As mentioned previously the ITSEC does not specify any security functionality.
+    The ITSEC specifies that ``Access Control'' is one of the categories which the developer should
+    use when specifying security functionality, and it is included in the ITSEC example functionality
+    classes.
+    The CTCPEC looks at access control from the perspective of Confidentiality Criteria (including
+    discretionary and mandatory confidentiality) and Integrity Criteria (including
+    discretionary and mandatory integrity).
+
+    \begin{table}[H]
+    \begin{center}
+    \bc
+        \heading{TCSEC}
+            \levels{Discretionary Access Control: C1, C2, B1, B2, B3, A1 \newline
+                    Mandatory Access Control: B1, B2, B3, A1}
+        \heading{ITSEC}
+            \levels{F-C1, F-C2, F-B1, F-B2, F-B3,
+                    F-IN, F-AV, F-DI, F-DC, F-DX}
+        \heading{CTCPEC}
+            \levels{Discretionary Confidentiality: CD-0, CD-1, CD-2, CD-3 CD-4 \newline
+                    Mandatory Confidentiality: CM-0, CM-1, CM-2 \newline
+                    Discretionary Integrity: ID-0, ID-1, ID-2, ID-4 \newline
+                    Mandatory Integrity: IM-0, IM-1, IM-2, IM-4}
+    \ec
+    \end{center}
+    \caption{Comparison of Access Control Criteria} \label{table:access-control}
+    \end{table}
+
+%--------------------------------------------------------------------------
+    \subsection{Audit} 
+    Table~\ref{table:audit} summarises the requirements for auditing. Audit requirements
+    in the TCSEC are covered under accountability criteria and are present in classes
+    above class D. The ITSEC recommends that ``Audit'' be one of the categories when
+    specifying security functionality. Like the TCSEC, the CTCPEC addresses audit under
+    accountability criteria but specifies a number of audit levels.
+
+    \begin{table}[H]
+    \begin{center}
+    \bc
+        \heading{TCSEC}
+            \levels{C2, B1, B2, B3, A1}
+        \heading{ITSEC}
+            \levels{F-C1, F-C2, F-B1, F-B2, F-B3,
+                    F-IN, F-AV, F-DI, F-DC, F-DX} 
+        \heading{CTCPEC}
+            \levels{WA-0, WA-1, WA-2, WA-3, WA-4, WA-5}
+    \ec
+    \end{center}
+    \caption{Comparison of Audit Criteria} \label{table:audit}
+    \end{table}
+
+%--------------------------------------------------------------------------
+
+\section{Comparing Security Functionality Assurance} 
+    This section compares the security evaluation criteria on the basis
+    of functionality assurance. The comparison is made against seven
+    system engineering characteristics which are important in
+    assuring that a system is secure. The characteristic are:
+    \begin{itemize}
+        \item Security Policy
+        \item System Design
+        \item Implementation
+        \item Security Testing
+        \item Security Documentation
+        \item Configuration Management
+    \end{itemize}
+
+%--------------------------------------------------------------------------
+    \subsection{Security Policy} 
+    A system's security policy is a set of security requirements which 
+    a system must satisfy. A detailed description of a system's security 
+    policy is known as the security policy model. The TCSEC, the ITSEC and the CTCPEC 
+    all address the issues of security policies and security policy models very similarly.
+    \begin{table}[H]
+    \begin{center}
+    \bc
+        \heading{TCSEC}
+            \approach{Security Policy is one of the four major criteria addressed
+                      for each class of the TCSEC}
+            \levels{C1, C2, B1, B2, B3, A1}
+        \heading{ITSEC}
+            \approach{For each assurance level in the ITSEC, security policy
+                      is assessed under the area of ``Development Process - Requirements''}
+            \levels{E1, E2, E3, E4, E5, E6, E7}
+        \heading{CTCPEC}
+            \approach{For each assurance level, the CTCPEC addresses the issue of 
+                      security policy under the area of the system's ``Architecture''}
+            \levels{T1, T2, T3, T4, T5, T6, T7}
+    \ec
+    \end{center}
+    \caption{Comparison of Security Policy Criteria} \label{table:policy}
+    \end{table}
+    Table~\ref{table:policy} summarises the requirements for security policy for each of the documents.
+    In general for the lower level of assurances in the TCSEC, the ITSEC and the CTCPEC, the
+    requirements include:
+    \begin{itemize}
+        \item Informal security policy
+        \item Informal or semi-formal security policy model
+        \item Tracing between the security policy and the security policy model
+        \item Tracing between the security policy model and the architectural design
+    \end{itemize}
+    At the higher levels of assurance, the requirements are stricter and include:
+    \begin{itemize}
+        \item Informal security policy
+        \item Formal security policy model
+        \item Demonstration of security policy mapping to security policy model
+        \item Formal verification that the security policy model maps to the architectural design
+    \end{itemize}
+
+%--------------------------------------------------------------------------
+
+    \subsection{System Design} 
+    Table~\ref{table:design} shows which assurance levels of the three documents
+    require assurance through the provision of a system design. As can be seen
+    from the table, evidence for system design is a requirement for all classes
+    of the TCSEC above class D, all assurance levels of the ITSEC above E0,
+    and all assurance levels of the CTCPEC above T0.
+    \begin{table}[H]
+    \begin{center}
+    \bc
+        \heading{TCSEC}
+            \levels{C1, C2, B1, B2, B3, A1}
+        \heading{ITSEC}
+            \levels{E1, E2, E3, E4, E5, E6}
+        \heading{CTCPEC}
+            \levels{T1, T2, T3, T4, T5, T6, T7}
+    \ec
+    \end{center}
+    \caption{Comparison of System Design Criteria} \label{table:design}
+    \end{table}
+    System design in the TCSEC is addressed under the ``Assurance'' category for each class.
+    In the ITSEC, the system design is addressed under the ``Development Process Criteria''
+    in the areas of ``Architectural Design'' and ``Detailed Design''. The CTCPEC addresses
+    system design under the criteria for ``Development Evidence''.
+    
+    The requirements for system design across the three sets of security evaluation criteria
+    are very similar. All the documents have requirements for:
+    \begin{itemize}
+        \item Architectural design
+        \item Detailed design
+        \item Mapping between security policy model and architectural design
+        \item Mapping between the architectural design and the detailed design
+        \item Mapping between the detailed design and the implementation
+    \end{itemize}
+    At the higher levels of assurance, there is a greater emphasis on formal design and 
+    verification techniques.
+
+%--------------------------------------------------------------------------
+
+    \subsection{Implementation} 
+    Implementation issues in the TCSEC are addressed under the Assurance Criteria, in the areas dealing
+    with operational assurance and development life-cycle assurance. However, the TCSEC does not 
+    go into much detail regarding implementation, focusing more on verification and testing techniques
+    to show that the system satisfies it's security policy. The TCSEC relies on the the interpretation
+    documents, the ``Rainbow Series''~\cite{rainbow}, for specific requirements regarding implementation
+    for different types of systems.
+
+    The ITSEC and the CTCPEC on the other hand, have more specific implementation requirements, at each
+    level of assurance. In each assurance level, the ITSEC addresses implementation requirements in the
+    following criteria groups.
+    \begin{itemize}
+        \item Construction --- The Development Process
+            \begin{itemize}
+                \item Implementation
+            \end{itemize}
+        \item Construction --- The Development Environment
+            \begin{itemize}
+                \item Programming Languages and Compilers
+                \item Developer's Security
+            \end{itemize}
+    \end{itemize}
+    The CTCPEC addresses implementation requirements, in the following criteria groups.
+    \begin{itemize}
+        \item Development Environment
+        \item Development Evidence
+        \item Operational Environment
+    \end{itemize}
+    In all the security evaluation criteria being compared, in the higher assurance levels,
+    there is an emphasis on semi-formal and formal verification techniques to show the mapping
+    between the detailed design and the requirement. Also common in the higher assurance levels,
+    is the requirement that security critical source code or all the source code be provided
+    when the system is being evaluated.
+
+%--------------------------------------------------------------------------
+
+    \subsection{Security Testing} 
+    The TCSEC, the ITSEC and the CTCPEC have very similar requirements
+    for security testing. All assurance levels (above the non-compliant
+    levels) in all the documents address the issue of security testing.
+    The emphasis is on:
+    \begin{itemize}
+        \item Test Plan Documentation
+        \item Test Results Documentation
+        \item Evidence of Testing
+        \item Justification that coverage of testing is sufficient
+        \item Evidence using test reports to show that the system
+              satisfies it's security policy.
+    \end{itemize}
+
+%--------------------------------------------------------------------------
+
+    \subsection{Security Documentation} 
+    The requirements for security documentation are very similar in the TCSEC,
+    the ITSEC, and the CTCPEC. All documents require that the system is provided
+    with security documentation for the user and for the system administrator
+    at all levels of assurance. This is summarised in table~\ref{table:docs}.
+        \begin{table}[H]
+        \bt
+        \cmp{Security Features User's Guide \newline (User Documentation)}
+            {C1, C2, B1, B2, B3, A1}
+            {E1, E2, E3, E4, E5, E6}
+            {T1, T2, T4, T4, T5, T6, T7}
+        \cmp{Trusted Facility Manual \newline (Administrator's Documentation)}
+            {C1, C2, B1, B2, B3, A1}
+            {E1, E2, E3, E4, E5, E6}
+            {T1, T2, T3, T4, T5, T6, T7}
+        \et
+        \caption{Comparison of ecurity Documentation Criteria} \label{table:docs}
+        \end{table}
+    Security documentation requirements are addressed in the ``Documentation''
+    criteria for each class in the TCSEC, in the ``Operational Documentation''
+    criteria of the ITSEC, and in the ``Security Documentation''
+    criteria of the CTCPEC.
+
+%--------------------------------------------------------------------------
+
+    \subsection{Configuration Management}
+        The use of a configuration control system throughout all phases of the
+        system's development is requirement at all levels of assurance for
+        the TCSEC, the ITSEC and the CTCPEC. This is summarised in table~\ref{table:config}.
+        \begin{table}[H]
+        \bt
+        \cmp{Configuration Control System}
+            {C1, C2, B1, B2, B3, A1}
+            {E1, E2, E3, E4, E5, E6}
+            {T1, T2, T3, T4, T5, T6, T7}
+        \et
+        \caption{Comparison of Configuration Management Criteria} \label{table:config}
+        \end{table}
+        Configuration management is addressed under ``Assurance'' in the TCSEC,
+        and under ``Development Environment'' in the both the ITSEC and the CTCPEC.
+
